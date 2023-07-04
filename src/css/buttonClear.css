@@ -1,0 +1,17 @@
+.styleBtnClear {
+  height: 60px;
+  font-size: 1.6em;
+  display: flex;
+  flex: 1;
+  background-color: #ac0206;
+  margin-top: 6px;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  color: white;
+  border: solid 2px white;
+  cursor: pointer;
+}
+.styleBtnClear:hover{
+  background-color: orange;
+}

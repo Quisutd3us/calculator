@@ -1,5 +1,5 @@
 .styleButton {
-  height: 83px;
+  height: 80px;
   display: flex;
   flex: 1 1;
   justify-content: center;
@@ -12,6 +12,7 @@
   border: 2px solid white;
   cursor: pointer;
   user-select: none;
+  margin:0 5px;
 }
 
 .styleButton:hover {
