@@ -11,6 +11,7 @@
   color: white;
   border: solid 2px white;
   cursor: pointer;
+  user-select: none;
 }
 .styleBtnClear:hover{
   background-color: orange;

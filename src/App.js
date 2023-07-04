@@ -1,9 +1,10 @@
 import './App.css';
-import freeCodeCampLogo from '../src/images/freecodecamp-logo.png'
+
 import {useState} from "react";
 import {evaluate} from 'mathjs'
-// import components
 
+// import components
+import Logo from "./components/Logo";
 import Button from "./components/Button";
 import DisplayCalc from "./components/DisplayCalc";
 import ClearCalc from "./components/Clear";
@@ -13,24 +14,30 @@ function App() {
   const [input, setInput] = useState('')
 
   let addInput = (value) => {
-    setInput(input + value)
+    if(input !== 'Error'){
+      setInput(input + value)
+    }
+    else{
+      setInput('')
+    }
   }
   let clearDisplay = () => {
     setInput('')
   }
 
   let doCalc = () => {
-    setInput(evaluate(input))
+    try{
+      setInput(evaluate(input))
+    }catch (e){
+      setInput('Error')
+    }
+
   }
 
   return (
       <div className="App">
         <div className={'logo-container'}>
-          <img
-              src={freeCodeCampLogo}
-              className={'logo-img'}
-              alt={'Logo FreeCodeCamp'}
-          />
+          <Logo/>
         </div>
         <div className={'calculator-container'}>
           <DisplayCalc input={input}></DisplayCalc>
